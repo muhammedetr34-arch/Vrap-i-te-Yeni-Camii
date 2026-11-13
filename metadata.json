@@ -1,0 +1,8 @@
+{
+  "name": "Vrapçişte Yeni Camii",
+  "description": "Vrapçişte Yeni Camii : günlük namaz vakitleri, üyelik bilgileri, duyurular, etkinlikler, şeffaflık raporları portalı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

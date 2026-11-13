@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Marcellus", "Lora", Georgia, serif;
+  --font-display: "Marcellus", Georgia, serif;
+  --font-quote: "Lora", Georgia, serif;
+  --font-script: "Dancing Script", cursive;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-arabic: "Amiri", Georgia, serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-ivory: #F6F4EE;
+  --color-ink: #1A1F1B;
+  --color-ink-soft: #6B7268;
+  --color-emerald-deep: #0B4A34;
+  --color-emerald-dark: #063122;
+  --color-emerald-light: #146B4C;
+  --color-gold: #B08A3E;
+  --color-gold-soft: #D9BD82;
+  --color-gold-ink: #1A1207;
+}
+
+@layer base {
+  html {
+    background-color: #F6F4EE;
+    color: #1A1F1B;
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  button, a, input, textarea, select {
+    outline-offset: 2px;
+  }
+
+  :focus-visible {
+    outline: 2px solid #B08A3E;
+    outline-offset: 2px;
+  }
+}
+
+.font-display {
+  font-family: "Marcellus", Georgia, serif;
+  letter-spacing: 0.006em;
+}
+
+.font-quote {
+  font-family: "Lora", Georgia, serif;
+}
+
+.font-script {
+  font-family: "Dancing Script", cursive;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-arabic {
+  font-family: "Amiri", Georgia, serif;
+}
+
+.bg-aurora-layer {
+  background:
+    radial-gradient(ellipse 55% 45% at 12% 18%, rgba(11, 74, 52, 0.11), transparent 62%),
+    radial-gradient(ellipse 50% 42% at 88% 12%, rgba(176, 138, 62, 0.10), transparent 60%),
+    radial-gradient(ellipse 48% 50% at 78% 88%, rgba(11, 74, 52, 0.08), transparent 62%),
+    radial-gradient(ellipse 42% 38% at 8% 92%, rgba(176, 138, 62, 0.07), transparent 60%);
+}
+
+.bg-islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%230B4A34' stroke-width='0.6' stroke-opacity='0.07'%3E%3Cpath d='M40 0L48 32L80 40L48 48L40 80L32 48L0 40L32 32Z'/%3E%3Crect x='16' y='16' width='48' height='48' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px auto 18px;
+  max-width: 320px;
+}
+
+.section-rule::before,
+.section-rule::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D9BD82, transparent);
+}
+
+.section-rule span {
+  color: #B08A3E;
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
